@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    tools:context=".activities.CategoryAddActivity">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+	android:id="@+id/relativeLayoutToolbar"
+	android:layout_width="match_parent"
+	android:layout_height="250dp"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentEnd="true"
+	android:layout_alignParentTop="true"
+	android:background="@drawable/shape_toolbar01">
+
+	<androidx.appcompat.widget.AppCompatImageButton
+	    android:id="@+id/imageButtonBack"
+	    android:layout_width="40dp"
+	    android:layout_height="40dp"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentStart="true"
+	    android:layout_margin="10dp"
+	    android:background="@null"
+	    android:src="@drawable/ic_back_primary_dark_color" />
+
+	<ImageView
+	    android:id="@+id/imageViewLogo"
+	    android:layout_width="110dp"
+	    android:layout_height="110dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="40dp"
+	    android:src="@drawable/logo"/>
+
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_below="@id/imageViewLogo"
+	    android:layout_marginTop="10dp"
+	    android:text="Add a new Category"
+	    android:textSize="28sp"
+	    android:textStyle="bold"
+	    android:fontFamily="serif"
+	    android:textColor="@color/secondaryColor"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+	android:id="@+id/scrollViewRegisterForm"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentEnd="true"
+	android:layout_marginHorizontal="30dp"
+	android:layout_below="@id/relativeLayoutToolbar">
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+
+	    <com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/textInputLayoutCategory"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:layout_marginHorizontal="30dp"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentTop="true"
+		app:hintEnabled="false"
+		app:boxBackgroundMode="filled"
+		app:boxBackgroundColor="@android:color/white">
+
+		<com.google.android.material.textfield.TextInputEditText
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:drawableStart="@drawable/ic_category_gray"
+		    android:drawablePadding="8dp"
+		    android:hint="Category Title"
+		    android:singleLine="true"
+		    android:fontFamily="serif"
+		    android:textColorHint="#C5C5C5"
+		    android:textColor="@color/primaryTextColor"
+		    android:inputType="textPersonName|textCapWords" />
+
+	    </com.google.android.material.textfield.TextInputLayout>
+
+	    <androidx.appcompat.widget.AppCompatButton
+		android:id="@+id/btnAddCategory"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="120dp"
+		android:layout_below="@id/textInputLayoutCategory"
+		android:layout_marginVertical="20dp"
+		android:layout_marginHorizontal="16dp"
+		android:layout_centerHorizontal="true"
+		android:paddingHorizontal="16dp"
+		android:background="@drawable/shape_button01"
+		android:text="Add Category"
+		android:textSize="18sp"
+		android:fontFamily="sans-serif-black"
+		android:textColor="@color/primaryTextColor" />
+
+	</RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

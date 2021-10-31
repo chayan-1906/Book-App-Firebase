@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileEditActivity">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+	android:id="@+id/relativeLayoutToolbar"
+	android:layout_width="match_parent"
+	android:layout_height="250dp"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentTop="true"
+	android:layout_alignParentEnd="true"
+	android:background="@drawable/shape_toolbar01">
+
+	<!-- Back Button -->
+	<androidx.appcompat.widget.AppCompatImageButton
+	    android:id="@+id/imageButtonBack"
+	    android:layout_width="40dp"
+	    android:layout_height="40dp"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_margin="10dp"
+	    android:background="@android:color/transparent"
+	    android:src="@drawable/ic_back_primary_dark_color" />
+
+	<!-- TextView: Title -->
+	<TextView
+	    android:id="@+id/textViewTitle"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginTop="15dp"
+	    android:layout_toEndOf="@id/imageButtonBack"
+	    android:fontFamily="serif"
+	    android:gravity="start"
+	    android:text="Edit Profile"
+	    android:textColor="@color/secondaryColor"
+	    android:textSize="20sp"
+	    android:textStyle="bold" />
+
+	<!-- Circle Image View -->
+	<de.hdodenhof.circleimageview.CircleImageView
+	    android:id="@+id/imageViewProfile"
+	    android:layout_width="120dp"
+	    android:layout_height="120dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="80dp"
+	    android:src="@drawable/profile_image" />
+
+    </RelativeLayout>
+
+    <ScrollView
+	android:id="@+id/scrollViewRegisterForm"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_below="@id/relativeLayoutToolbar"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentEnd="true"
+	android:layout_marginHorizontal="30dp">
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+
+	    <!-- Full Name -->
+	    <com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/textInputLayoutFullName"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentEnd="true"
+		android:layout_marginHorizontal="16dp"
+		android:layout_marginTop="20dp"
+		app:boxBackgroundColor="@android:color/white"
+		app:boxBackgroundMode="filled">
+
+		<com.google.android.material.textfield.TextInputEditText
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:drawableStart="@drawable/ic_person_gray"
+		    android:drawablePadding="8dp"
+		    android:fontFamily="serif"
+		    android:hint="Name"
+		    android:inputType="textPersonName|textCapWords"
+		    android:singleLine="true"
+		    android:textColor="@color/primaryTextColor" />
+
+	    </com.google.android.material.textfield.TextInputLayout>
+
+	    <!-- Update Button -->
+	    <androidx.appcompat.widget.AppCompatButton
+		android:id="@+id/btnUpdate"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/textInputLayoutFullName"
+		android:layout_centerHorizontal="true"
+		android:layout_marginHorizontal="16dp"
+		android:layout_marginVertical="20dp"
+		android:background="@drawable/shape_button01"
+		android:fontFamily="sans-serif-black"
+		android:minWidth="120dp"
+		android:paddingHorizontal="16dp"
+		android:text="Update Profile"
+		android:textColor="@color/primaryTextColor"
+		android:textSize="18sp" />
+
+	</RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
